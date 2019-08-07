@@ -9,6 +9,7 @@ import android.widget.Button;
 public class HomeActivity extends AppCompatActivity {
 
     public final static int MEAN_BLUR = 1;
+    public final static int GAUSSIAN_BLUR = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

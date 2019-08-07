@@ -119,7 +119,14 @@ public class MainActivity extends AppCompatActivity {
 
                     switch (ACTION_MODE) {
                         case HomeActivity.MEAN_BLUR:
-                            Imgproc.blur(src, src, new Size(3, 3));
+                            //Imgproc.GaussianBlur(src, src, new Size(3, 3), 0);
+                            Mat kernal = new Mat(3, 3, CvType.CV_16SC1);
+                            kernal.put(0, 0, 0, -1, 0, -1, 5, -1, 0, -1, 0);
+                            //Mat kernalDilate = Imgproc.getStructuringElement(Imgproc.MORPH_DILATE, new Size(3, 3));
+                            //Imgproc.dilate(src, src, kernalDilate);
+                            //Imgproc.threshold(src, src, 100, 255, Imgproc.THRESH_TRUNC);
+                            //Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2BGRA);
+                            //Imgproc.adaptiveThreshold(src, src, 255, Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C, Imgproc.THRESH_BINARY, 3, 0);
                             break;
                     }
 
